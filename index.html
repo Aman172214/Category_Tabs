@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <!-- REPLACE THIS WITH YOUR PROJECT NAME. EXAMPLE - Category tabs -->
-    <title>Coding Assesment L2 boilerplate</title>
-
-</head>
-
-<body>
-    <!-- Your code goes here -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Category Tabs</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <a href="https://github.com/mmdmrishabh/Coding-assessment-l2-Boilerplate-code/blob/main/Readme.md" target="_blank">Read how to work with boilerplate</a>
-    </div>
-    <!-- Happy coding 😊 -->
-    <script src="./script.js"></script>
-</body>
+      <h1 class="page-heading">SELECT YOUR CHOICE</h1>
 
+      <div class="tab-container">
+        <div
+          class="tab active"
+          data-category="men"
+          onclick="showContent('men')"
+        >
+          Men
+        </div>
+        <div class="tab" data-category="women" onclick="showContent('women')">
+          Women
+        </div>
+        <div class="tab" data-category="kids" onclick="showContent('kids')">
+          Kids
+        </div>
+      </div>
+
+      <div class="card-section">
+        <div class="product-card" id="card1"></div>
+        <div class="product-card" id="card2"></div>
+        <div class="product-card" id="card3"></div>
+        <div class="product-card" id="card4"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      // Load data for the 'Men' category when the page is loaded
+      window.onload = function () {
+        showContent("men");
+      };
+    </script>
+  </body>
 </html>
